@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull Posts from X [Formerly Twitter]</title>
+    <link href:"{{ url_for('static', filename='./styles.css' )}}" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Pull posts from X</h1>
+    <form action="/posts" class="action">
+        <input type="text" name="posts" id="posts" placeholder="Enter key word">
+        <button type="submit">Search</button>
+    </form>
+</body>
+
+</html>
