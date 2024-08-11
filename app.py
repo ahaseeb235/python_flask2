@@ -1,6 +1,25 @@
+# import tweepy
+
+# consumer_key = '1AD5JhK8lm4nTZU4I1cmh5HvJ'
+# consumer_secret = 'ep8qXmDcbxyI3pLghjqoDywnh2MalqXHfvdGaV2MmPJzvUQq1w'
+# access_token = '2147499236-CEfoWSjokNBLAq7FnVzwhMBKRcU1W8cg43RB0Ic'
+# access_token_secret = 'hhoi5FIySSgRbK1WhPE5RHWHDLL6oyFYKGFo5tPfDk85g'
+
+# auth = tweepy.OAuth1UserHandler(consumer_key, consumer_secret, access_token, access_token_secret)
+# api = tweepy.API(auth)
+
+# try:
+#     api.verify_credentials()
+#     print("Authentication OK")
+# except:
+#     print("Error during authentication")
+
+
+
+
 from flask import Flask, render_template, request, jsonify
 import tweepy
-import configparser
+# import configparser
 
 app = Flask(__name__)
 
@@ -11,7 +30,7 @@ access_token = '2147499236-CEfoWSjokNBLAq7FnVzwhMBKRcU1W8cg43RB0Ic'
 access_token_secret = 'hhoi5FIySSgRbK1WhPE5RHWHDLL6oyFYKGFo5tPfDk85g'
 
 auth = tweepy.OAuth1UserHandler(consumer_key, consumer_secret, access_token, access_token_secret)
-api = tweepy.API(auth)
+api = tweepy.API(auth, wait_on_rate_limit=True)
 
 @app.route('/')
 def index():

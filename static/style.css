@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 input,
@@ -21,4 +22,8 @@ button {
     font-size: 2rem;
     padding: 1rem;
     border-radius: 10px;
+}
+
+table {
+    max-width: 80%;
 }
